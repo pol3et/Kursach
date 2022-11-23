@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("https://res.cloudinary.com/dh6zremqy/image/upload/q_40/v1498025712/Black-Brick-Wall-Background_vkkkk2.jpg");
+  background-size: cover;
+}
+
+canvas {
+  background-color: rgb(44,44,44);
+  background-size: 1000px 765px;
+  background-image: url("https://res.cloudinary.com/dh6zremqy/image/upload/q_40/v1497412792/brickroom_zmv4qt.jpg");
+  border: 1px solid black;
+}
+
+canvas:hover {
+  cursor: none;
+}
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+  font-family:"101! Brick Layer";
+  src: url("../assets/101__Brick_Layer.eot?") format("eot"), url("../assets/101__Brick_Layer.woff") format("font-woff"), url("../assets/101__Brick_Layer.ttf") format("truetype"), url("../assets/101__Brick_Layer.svg#101BrickLayer") format("svg");
+  font-weight:normal;
+  font-style:normal;
+}
+
+.title {
+  font-family: "101! Brick Layer";
+  font-size: 90px;
+  color: #E61938;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
