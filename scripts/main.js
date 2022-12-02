@@ -327,8 +327,6 @@ import { switchTheme, reloadTheme } from "./theme-switcher.js";
             multipleChoices: multipleChoices,
             isCorrect: false
         };
-        console.warn(equationData.phrase);
-        console.error(getArithmeticWord(equation[ 1 ]));
         localStorage.setItem("equationData", JSON.stringify(equationData));
     }
 
