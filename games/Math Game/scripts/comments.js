@@ -1,4 +1,3 @@
-// https://sites.highlands.edu/tutorial-center/tutor-resources/online-tutor-training/module-3/fifty-ways-to-praise-your-students/
 export const correctComments = [
     `Good!`,
     `You’ve got it right!`,

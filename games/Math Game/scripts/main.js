@@ -210,16 +210,16 @@ import { switchTheme, reloadTheme } from "./theme-switcher.js";
     function getArithmeticWord(operator) {
         if (operator === "+")
         {
-            return "sum";
+            return "равна сумма";
         } else if (operator === "-")
         {
-            return 'difference';
+            return 'равна разность';
         } else if (operator === "*")
         {
-            return 'product';
+            return 'равно произведение';
         } else if (operator === "/")
         {
-            return 'quotient';
+            return 'равно частное';
         }
     }
 
@@ -327,6 +327,8 @@ import { switchTheme, reloadTheme } from "./theme-switcher.js";
             multipleChoices: multipleChoices,
             isCorrect: false
         };
+        console.warn(equationData.phrase);
+        console.error(getArithmeticWord(equation[ 1 ]));
         localStorage.setItem("equationData", JSON.stringify(equationData));
     }
 
