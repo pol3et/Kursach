@@ -164,7 +164,7 @@ a:active {
 .white {
     display: inline-block;
     color: #ffffff;
-    transform: rotate(30deg);
+    transform: rotate(15deg);
 }
 
 .indigo {
