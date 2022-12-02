@@ -1,7 +1,7 @@
-# WhizzyKid
+# BarsKids
 
-[https://whizzykid.com](https://whizzykid.com)
+BarsKids is a web game that is intended to provide all kinds of logical puzzles to improve Kids' solving skills.
 
-WhizzyKid is a web app that turns any kid into a whizz.
-It's a fun project I started to help my daughter learn kindergarten math.
-The goal for the project is to make it easier to help kids learn basic arithmetic.
+The Player's task is to complete all minigames in order to help the character (Bars Tim) get to the final destination.
+For each challenge completion the player is rewarded with points which could be utilized to buy customs for the Bars Tim.
+
