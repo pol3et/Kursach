@@ -20,7 +20,7 @@ import { switchTheme, reloadTheme } from "./theme-switcher.js";
 
     // Set each equation operand minimum and maximum values
     const operandMinValue = 0; // The minimum value for an operand
-    const operandMaxValue = 10; // The maximum value of an operand
+    const operandMaxValue = 100; // The maximum value of an operand
 
     /**
      * Gets a random number between a given minimum and maximum values
@@ -210,16 +210,16 @@ import { switchTheme, reloadTheme } from "./theme-switcher.js";
     function getArithmeticWord(operator) {
         if (operator === "+")
         {
-            return "sum";
+            return "равна сумма";
         } else if (operator === "-")
         {
-            return 'difference';
+            return 'равна разность';
         } else if (operator === "*")
         {
-            return 'product';
+            return 'равно произведение';
         } else if (operator === "/")
         {
-            return 'quotient';
+            return 'равно частное';
         }
     }
 

@@ -31,7 +31,7 @@
     --teal: #008080;
     --turquoise: #40E0D0;
     --violet: #EE82EE;
-    --white: #ffffff;
+    --white: rgba(255,255,255,0.87);
     --yellow: #FFFF00;
 
     /* calculations sizing */
@@ -110,7 +110,7 @@ a:active {
     font-family: 'Play', sans-serif;
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: bold;
-    color: #f5f5af;
+    color: #ffffff;
     text-align: center;
     text-shadow: 0 0 1px rgba(100, 100, 100, 1);
     letter-spacing: 0;
@@ -159,7 +159,12 @@ a:active {
 .blue {
     display: inline-block;
     color: #0000ff;
-    transform: rotate(-27deg);
+}
+
+.white {
+    display: inline-block;
+    color: #ffffff;
+    transform: rotate(15deg);
 }
 
 .indigo {
@@ -201,11 +206,11 @@ a:active {
     top: var(--header-height);
     width: var(--sidebar-width);
     height: calc(100vh - (var(--header-height) + var(--footer-height)));
-    background: rgba(0, 0, 0, .6);
+    background: rgba(130, 124, 124, 0.6);
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(28, 27, 27, 0.1);
     overflow: auto;
 }
 
@@ -214,11 +219,11 @@ a:active {
     border-radius: 5px;
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
-    color: #ffffff;
+    color: #010101;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(130, 124, 124, 0.6);
     outline: none;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 7px rgba(28, 27, 27, 0.1);
 }
 
 .menu-elements {
