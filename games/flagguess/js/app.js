@@ -153,7 +153,7 @@ let questionArrayGenerator = function(arr,correctIndex){
     while(count<=2){
         tempIndex = Math.floor(Math.random()*arr.length);
         
-        if(correctIndex!=tempIndex){
+        if(correctIndex!=tempIndex && !(arr[tempIndex] in quesArr)){
             quesArr.push(arr[tempIndex]);
             count+=1;
         }
