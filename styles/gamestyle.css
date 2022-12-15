@@ -651,8 +651,12 @@ main h2 {
     padding-bottom: 100px;
 }
 
-.fooer_txt{
+.footer_txt{
     color:white;
     margin-top: 20px;
     text-align: center;
+}
+
+.main{
+    margin: 100px auto;
 }
