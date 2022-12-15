@@ -623,7 +623,7 @@ main h2 {
 footer {
     font-family: 'Inter', sans-serif;
     width: 100%;
-    height: 200px;
+    height: 150px;
     margin: 0;
     padding: 2rem; 
     background: var(--footer-background);
