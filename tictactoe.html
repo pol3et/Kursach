@@ -209,7 +209,7 @@ function RandomPlayer(board) {
 		
 		// move randomly into any available cell
 		availableCells = getAvailableCells();
-		idx = Math.floor(Math.random()*availableCells.length);
+		idx = Math.round(Math.random()*availableCells.length);
 		cell = availableCells[idx];
 		return board.move(cell);
 	}
@@ -271,8 +271,16 @@ function Game(autoPlayerClass) {
 	var x0 = Math.floor((x+0.5)*CELL_SIZE_X);
 	var y0 = Math.floor((y+0.5)*CELL_SIZE_Y);
 	
+	ww = board.getWinner();
+	if (ww == CIRCLE) {
+			ctx.fillStyle = "#EE2222";
+		}
+		else {
+			ctx.fillStyle = '#39E75F';
+		}
+
 	if (isWinner) {
-		ctx.fillStyle = "#EE2222";
+
 		rx = (CELL_SIZE_X-4)/2;
 		ry = (CELL_SIZE_Y-4)/2;
 		ctx.fillRect(x0-rx, y0-ry, rx*2, ry*2);
@@ -316,10 +324,11 @@ function Game(autoPlayerClass) {
 	var messageText;
 	
 	if (winner == CROSS) {
-		messageText = "Выиграли крестики";
+		messageText = "Поздравляем! Вы победитель!";
 	}
 	else if (winner == CIRCLE) {
-		messageText = "Выиграли ноликии";
+		messageText = "Победил Барс Тим!\
+		 Попробуйте еще раз";
 	}
 	else {
 		messageText = "Это ничья";
@@ -362,10 +371,13 @@ function dismissMessageBox() {
 var game;
 
 function getAutoPlayerClass() {
-	const urlParams = new URLSearchParams(window.location.search);
-	const player = urlParams.get('player');
+	// const urlParams = new URLSearchParams(window.location.search);
+	const playerOptions = ['random', 'smart', 'kill'];
+	idx = Math.floor(Math.random()*playerOptions.length);
+	player = playerOptions[idx]    //urlParams.get('player');
 	if (player == 'human') return null;
 	if (player == 'random') return RandomPlayer;
+	if (player == 'smart') return SmartPlayer;
 	return SmartPlayer;
 }
 
@@ -446,7 +458,6 @@ function playAgain() {
                 </div>
             </div>                    
         </header>
-	</div>
 
 
 <div class="main">
@@ -470,5 +481,8 @@ function playAgain() {
 		<input type="button" value="OK" onclick="dismissMessageBox()"></input>
 	</div>
 </div>
+<footer class="footer">
+	<div class="footer_txt">Сделанно с любовью</div>
+</footer>
 </body>
 </html>
