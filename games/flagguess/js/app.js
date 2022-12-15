@@ -19,7 +19,7 @@ let dataArray = [
 },
 {
     name: "Армения",
-    src: "games/flagguess/games/flagguess/assets/data/armenia.png" 
+    src: "games/flagguess/assets/data/armenia.png" 
 },
 {
     name: "Австралия",
