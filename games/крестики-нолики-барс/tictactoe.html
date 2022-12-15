@@ -1,0 +1,397 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Крестики-Нолики Bars</title>
+<style>
+.main {
+	width: 500px;
+	position: relative;
+	text-align: center;
+}
+
+.messageBox {
+	border: 1px solid black;
+	background-color: #FFEEEEE0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+}
+
+.hidden {
+	display: none;
+}
+
+.messageBox .message {
+	font-size: 20;
+	color: blue;
+	padding-bottom: 5px;
+}
+
+.messageBox input {
+	width: 70px;
+	background-color: #EDD;
+}
+
+.playAgain {
+	margin-top: 15px;
+}
+
+.playAgain input {
+	padding: 3px 10px 3px 10px;
+}
+
+@media only screen and (max-width: 500px) {
+	body {
+		padding: 0px;
+		margin: 0px;
+	}
+	.main {
+		width: 100vw;
+	}
+	
+	#canvas {
+		width: 90vw;
+		height: 90vw;
+	}
+}
+
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+	body {
+		padding: 0px;
+		margin: 0px;
+	}
+	h1 {
+		display: none;
+	}
+	.main {
+		width: 100vh;
+	}
+	.playAgain {
+		position: absolute;
+		border: 1px solid black;
+		background-color: #FFEEEEE0;
+		top: 50%;
+		left: 50%;
+		width: 60%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+	}
+	#canvas {
+		width: 90vh;
+		height: 90vh;
+	}
+}
+
+</style>
+<script src="moves.js"></script>
+
+<script>
+const EMPTY = 0;
+const CIRCLE = 1;
+const CROSS = 2;
+
+const CELL_SIZE_X = 150;
+const CELL_SIZE_Y = 150;
+const CELLS_X = 3;
+const CELLS_Y = 3;
+const TOTAL_CELLS = 9;
+
+function Board() {
+	const winningStreaks = [
+		[0,1,2], [3,4,5], [6,7,8],
+		[0,3,6], [1,4,7], [2,5,8],
+		[0,4,8], [2,4,6]
+	];
+	
+	var cells;
+	var nAvailableCells;
+	var winner;
+	var currentTurn;
+	var onDrawCell = [];
+	
+	function reset() {
+		cells = [
+			EMPTY, EMPTY, EMPTY,
+			EMPTY, EMPTY, EMPTY,
+			EMPTY, EMPTY, EMPTY
+		];
+		nAvailableCells = 9;
+		winner = null;
+		currentTurn = CROSS;
+	}
+	
+	reset();
+	
+    function hasWinningStreak(streak, side) {
+	   result = streak.every( n => cells[n] == side);
+	   if (result) {
+		winningCells = streak;
+	   }
+	   return result;
+	}
+	
+	function isWinner(side) {
+		return winningStreaks.some( streak => hasWinningStreak(streak, side) );
+	}
+	
+	function drawCell(n, content,isWinner) {
+		onDrawCell.forEach( callback => callback(n, content, isWinner) );
+	}
+	
+	function setCell(n, content) {
+		cells[n] = content;
+		drawCell(n, content, false);
+	}
+	
+	this.reset = reset;
+	
+	this.move = function (n) {
+	    if (cells[n] != EMPTY) return;
+		if (winner != null) return;
+		
+		setCell(n, currentTurn);
+		if (isWinner(currentTurn)) {
+			winner = currentTurn;
+			winningCells.forEach( n => drawCell(n, winner, true) );
+		}
+		currentTurn = currentTurn == CROSS ? CIRCLE : CROSS;
+		--nAvailableCells;
+		if (nAvailableCells == 0) {
+			winner = EMPTY;
+		}
+		return winner != null;
+	}
+	
+	this.onDrawCell = function(callback) {
+	   onDrawCell.push(callback)
+	}
+	
+	this.cell = function(n) {
+		return cells[n];
+	}
+	
+	this.getWinner = function() {
+		return winner;
+	}
+	
+	this.isGameEnded = function() {
+		return winner != null;
+	}
+}
+
+function RandomPlayer(board) {
+	function getAvailableCells() {
+		availableCells = [];
+		for (n=0; n<TOTAL_CELLS; ++n) {
+			if (board.cell(n) == EMPTY) {
+				availableCells.push(n);
+			}
+		}
+		return availableCells;
+	}
+	
+	this.move = function() {
+		if (board.isGameEnded()) return;
+		
+		// move randomly into any available cell
+		availableCells = getAvailableCells();
+		idx = Math.floor(Math.random()*availableCells.length);
+		cell = availableCells[idx];
+		return board.move(cell);
+	}
+}
+
+
+function SmartPlayer(board) {
+	var moves = getMoves();
+	var powers = [ 1, 3, 9, 27, 81, 243, 729, 2187, 6561 ]; // powers of 3
+
+	function boardToInt() {
+		var result=0;
+		for (n=0; n<TOTAL_CELLS; ++n) {
+			result += board.cell(n)*powers[n];
+		}
+		return result;
+	}
+
+	this.move = function() {
+		if (board.isGameEnded()) return;
+		n = boardToInt();
+		cell = moves[n];
+		return board.move(cell);
+	}
+}
+
+function Game(autoPlayerClass) {
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  var board = new Board();
+  var autoPlayer = autoPlayerClass ? new autoPlayerClass(board) : null;
+  board.onDrawCell(drawCell);
+  canvas.addEventListener("click", onClick, false);
+  
+  function line(x0,y0,x1,y1) {
+	ctx.beginPath();
+	ctx.moveTo(x0,y0);
+	ctx.lineTo(x1,y1);
+	ctx.stroke();
+  }
+  
+  function drawLines() {
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 3;
+	
+    for (x=1; x<CELLS_X; ++x) {
+	  line(x*CELL_SIZE_X, 0, x*CELL_SIZE_X, CELLS_Y*CELL_SIZE_Y);
+    }
+		
+    for (y=1;y<CELLS_Y; ++y) {
+      line(0, y*CELL_SIZE_Y, CELLS_X*CELL_SIZE_X, y*CELL_SIZE_Y);
+	}
+  }
+  
+  function drawCell(n, content, isWinner) {
+	if (content == EMPTY) return;
+	var y = Math.floor(n/CELLS_X);
+	var x = n % CELLS_X;
+	var x0 = Math.floor((x+0.5)*CELL_SIZE_X);
+	var y0 = Math.floor((y+0.5)*CELL_SIZE_Y);
+	
+	if (isWinner) {
+		ctx.fillStyle = "#EE2222";
+		rx = (CELL_SIZE_X-4)/2;
+		ry = (CELL_SIZE_Y-4)/2;
+		ctx.fillRect(x0-rx, y0-ry, rx*2, ry*2);
+	}
+	
+	r = CELL_SIZE_X*0.4;
+	ctx.lineWidth = 10;
+	
+	if (content == CROSS) {
+		line(x0-r, y0-r, x0+r, y0+r);
+		line(x0-r, y0+r, x0+r, y0-r);
+	}
+	else {
+		ctx.beginPath();
+		ctx.ellipse(x0,y0,r,r,0,0,Math.PI*2);
+		ctx.stroke();
+	}
+  }
+  
+  function onClick(event) {
+    x = Math.floor( event.offsetX/canvas.offsetWidth * CELLS_X );
+	y = Math.floor( event.offsetY/canvas.offsetHeight * CELLS_Y );
+	onClickCell(x,y);
+  }
+  
+  function onClickCell(x,y) {
+    if (board.isGameEnded()) return;
+	var n = y*CELLS_X+x;
+    var gameEnded = board.move(n);
+
+	if (autoPlayer && !gameEnded) {
+		gameEnded = autoPlayer.move();
+	}
+	
+	if (gameEnded) {
+		announceWinner(board.getWinner());
+	}
+  }
+  
+  function announceWinner(winner) {
+	var messageText;
+	
+	if (winner == CROSS) {
+		messageText = "Выиграли крестики";
+	}
+	else if (winner == CIRCLE) {
+		messageText = "Выиграли ноликии";
+	}
+	else {
+		messageText = "Это ничья";
+	}
+	
+	message = document.getElementsByClassName("message")[0];
+	message.innerHTML = messageText;
+	
+	makeVisible("messageBox", true);
+  }
+  
+  this.init = function() {
+    drawLines();
+  }
+  
+  this.reset = function() {
+	board.reset();
+	ctx.clearRect(0,0,canvas.width,canvas.height);
+	drawLines();
+  }
+}
+
+function makeVisible(className, isVisible) {
+	elements = document.getElementsByClassName(className);
+	for (var i=0; i<elements.length; ++i) {
+		if (isVisible) {
+			elements[i].classList.remove("hidden");
+		}
+		else {
+			elements[i].classList.add("hidden");
+		}
+	}
+}
+
+function dismissMessageBox() {
+	makeVisible("messageBox", false);
+	makeVisible("playAgain", true);
+}
+
+var game;
+
+function getAutoPlayerClass() {
+	const urlParams = new URLSearchParams(window.location.search);
+	const player = urlParams.get('player');
+	if (player == 'human') return null;
+	if (player == 'random') return RandomPlayer;
+	return SmartPlayer;
+}
+
+function onLoad() {
+	game = new Game(getAutoPlayerClass());
+	game.init();
+}
+
+function playAgain() {
+	game.reset();
+	makeVisible("playAgain", false);
+}
+</script>
+</head>
+<body onLoad="onLoad()">
+
+<div class="main">
+	<style>
+	body {
+		background: #000 url(fon.jpg); /* Фоновый цвет и фоновый рисунок*/
+		color: #fff; /*Цвет текста на странице*/
+		background-attachment: fixed; /* Фон страницы фиксируется */
+		background-repeat: repeat-x;
+		background-size: 100%;
+		/* Изображение повторяется по горизонтали */
+	}
+   </style>
+	<canvas id="canvas" width="450" height="450"></canvas>
+	<div class="playAgain hidden">
+		<input type="button" value="Играть ещё!" onclick="playAgain()"></input>
+	</div>
+	
+	<div class="messageBox hidden">
+		<div class="message">Вы проиграли.</div>
+		<input type="button" value="OK" onclick="dismissMessageBox()"></input>
+	</div>
+</div>
+</body>
+</html>

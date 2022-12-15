@@ -35,7 +35,7 @@ body {
     height: 100%;
     font-size: 1rem;
     color: #000;
-    background-image: url('/design/mapdes.png');
+    background-image: url('/design/mapshak.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -45,11 +45,11 @@ body {
 }
 
 #interface {
-    width: 80%;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
     flex: 1 1 auto;
 }
