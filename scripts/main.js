@@ -299,12 +299,14 @@ import { switchTheme, reloadTheme } from "./theme-switcher.js";
     const secondOperandElement = document.getElementById("second-operand-element");
     const equationResultElement = document.getElementById("equation-result");
     const answerChoiceElements = document.getElementsByClassName("answer-choices");
+    const equationCounter = document.getElementById("equation-counter");
 
     /**
      * Displays an object property values as an equation string on the page
      * */
     function displayEquation() {
         const equationData = JSON.parse(localStorage.getItem("equationData"));
+        equationCounter.innerHTML = equationData.eqcounter
         equationPhraseElement.innerHTML = equationData.phrase;
         firstOperandElement.innerHTML = equationData.firstOperand;
         operatorElement.innerHTML = equationData.mathOperator;
@@ -319,6 +321,7 @@ import { switchTheme, reloadTheme } from "./theme-switcher.js";
         const equation = object.equation.split(" ");
         const multipleChoices = shuffleArray(getMultipleChoices(object.result));
         const equationData = {
+            eqcounter: eqcounter,
             phrase: getArithmeticWord(equation[ 1 ]),
             firstOperand: equation[ 0 ],
             mathOperator: equation[ 1 ],
@@ -471,7 +474,7 @@ import { switchTheme, reloadTheme } from "./theme-switcher.js";
         setTimeout(() => {
             comment.style.display = "none";
         }
-            , 2000);
+            , 1000);
     };
 
     // reload the saved equation when the previous button is clicked
@@ -533,7 +536,7 @@ import { switchTheme, reloadTheme } from "./theme-switcher.js";
         displayEquation();
         resetAnswerStyle();
     }
-
+    let eqcounter = 1;
     // check the answer when the check button is clicked
     const checkAnswer = () => {
         checkButton.addEventListener("click", () => {
@@ -544,12 +547,13 @@ import { switchTheme, reloadTheme } from "./theme-switcher.js";
             {
                 styleAnswer(1);
                 equationData.isCorrect = true;
+                equationData.eqcounter = eqcounter++;
                 // enableButton(nextButton);
 
                 setTimeout(() => {
                     //trigger the next button
                     triggerNextButton();
-                }, 2500);
+                }, 1000);
 
             } else
             {
