@@ -15,63 +15,63 @@ let p1 = new player(0,0); // New player initialisation
 let dataArray = [
 {
     name: "Аргентина",
-    src: "assets/data/argentina.png" 
+    src: "games/flagguess/assets/data/argentina.png" 
 },
 {
     name: "Армения",
-    src: "assets/data/armenia.png" 
+    src: "games/flagguess/games/flagguess/assets/data/armenia.png" 
 },
 {
     name: "Австралия",
-    src: "assets/data/australia.png" 
+    src: "games/flagguess/assets/data/australia.png" 
 },
 {
     name: "Австрия",
-    src: "assets/data/austria.png"  
+    src: "games/flagguess/assets/data/austria.png"  
 },
 {
     name: "Беларусь",
-    src: "assets/data/belarus.png" 
+    src: "games/flagguess/assets/data/belarus.png" 
 },
 {
     name: "Бельгия",
-    src: "assets/data/belgium.png" 
+    src: "games/flagguess/assets/data/belgium.png" 
 },
 {
     name: "Бразилия",
-    src: "assets/data/brazil.png" 
+    src: "games/flagguess/assets/data/brazil.png" 
 },
 {
     name: "Япония",
-    src: "assets/data/japan.png" 
+    src: "games/flagguess/assets/data/japan.png" 
 },
 {
     name: "Китай",
-    src: "assets/data/peoples_republic_of_china.png" 
+    src: "games/flagguess/assets/data/peoples_republic_of_china.png" 
 },
 {
     name: "Польша",
-    src: "assets/data/poland.png" 
+    src: "games/flagguess/assets/data/poland.png" 
 },
 {
     name: "Россия",
-    src: "assets/data/russia.png" 
+    src: "games/flagguess/assets/data/russia.png" 
 },
 {
     name: "Швейцария",
-    src: "assets/data/switzerland.png" 
+    src: "games/flagguess/assets/data/switzerland.png" 
 },
 {
     name: "Украина",
-    src: "assets/data/ukraine.png" 
+    src: "games/flagguess/assets/data/ukraine.png" 
 },
 {
     name: "Великобритания",
-    src: "assets/data/united_kingdom.png" 
+    src: "games/flagguess/assets/data/united_kingdom.png" 
 },
 {
     name: "США",
-    src: "assets/data/united_states.png" 
+    src: "games/flagguess/assets/data/united_states.png" 
 },
 ];
 
