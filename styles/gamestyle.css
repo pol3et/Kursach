@@ -2,7 +2,7 @@
 
     /* Themes Colors */
     --black: rgba(0, 0, 0, 0.87);
-    --blue: #0000FF;
+    --blue: #00FFFF;
     --brown: #A52A2A;
     --coral: #FF7F50;
     --crimson: #DC143C;
@@ -65,7 +65,7 @@ body {
     height: 100%;
     font-size: 1rem;
     color: #000;
-    background: #ffffff;
+    background: #5F5F5F;
     font-family: 'Inter', sans-serif;
     /*overflow: hidden;*/
 }
@@ -158,7 +158,7 @@ a:active {
 
 .blue {
     display: inline-block;
-    color: #0000ff;
+    color: #00FFFF;
 }
 
 .white {

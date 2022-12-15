@@ -20,7 +20,7 @@ function init(dificult){
     document.ontouchmove = function(event){ event.preventDefault(); }
     _img = new Image();
     _img.addEventListener('load',onImage,false);
-    _img.src = "img/puzzle.jpg";
+    _img.src = "games/bars puzzle/img/puzzle.jpg";
     PUZZLE_DIFFICULTY = dificult;
 }
 function onImage(e){
