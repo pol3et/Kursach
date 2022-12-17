@@ -174,6 +174,7 @@ function Board() {
 		if (nAvailableCells == 0) {
 			winner = EMPTY;
 		}
+
 		return winner != null;
 	}
 	
@@ -194,6 +195,16 @@ function Board() {
 	}
 }
 
+function getAvailableCellsGlobal(board) {
+	availableCells = [];
+	for (n=0; n<TOTAL_CELLS; ++n) {
+		if (board.cell(n) == EMPTY) {
+			availableCells.push(n);
+		}
+	}
+	return availableCells;
+}
+
 function RandomPlayer(board) {
 	function getAvailableCells() {
 		availableCells = [];
@@ -210,7 +221,7 @@ function RandomPlayer(board) {
 		
 		// move randomly into any available cell
 		availableCells = getAvailableCells();
-		idx = Math.round(Math.random()*availableCells.length);
+		idx = Math.floor(Math.random()*availableCells.length);
 		cell = availableCells[idx];
 		return board.move(cell);
 	}
@@ -310,6 +321,8 @@ function Game(autoPlayerClass) {
   function onClickCell(x,y) {
     if (board.isGameEnded()) return;
 	var n = y*CELLS_X+x;
+	var avc = getAvailableCellsGlobal(board);
+	if (avc.includes(n) == false) return;
     var gameEnded = board.move(n);
 
 	if (autoPlayer && !gameEnded) {
@@ -320,6 +333,7 @@ function Game(autoPlayerClass) {
 		announceWinner(board.getWinner());
 	}
   }
+
   
   function announceWinner(winner) {
 	var messageText;
@@ -328,7 +342,7 @@ function Game(autoPlayerClass) {
 		messageText = "Поздравляем! Вы победитель!";
 	}
 	else if (winner == CIRCLE) {
-		messageText = "Победил Барс Тим!\
+		messageText = "Победил Барс Тим!\<br>\
 		 Попробуйте еще раз";
 	}
 	else {
@@ -373,9 +387,10 @@ var game;
 
 function getAutoPlayerClass() {
 	// const urlParams = new URLSearchParams(window.location.search);
-	const playerOptions = ['random', 'smart', 'kill'];
+	const playerOptions = ['random', 'smart', 'garfield'];
 	idx = Math.floor(Math.random()*playerOptions.length);
-	player = playerOptions[idx]    //urlParams.get('player');
+	player = playerOptions[idx];   //urlParams.get('player');
+	console.log(player);
 	if (player == 'human') return null;
 	if (player == 'random') return RandomPlayer;
 	if (player == 'smart') return SmartPlayer;
@@ -439,7 +454,7 @@ function playAgain() {
                 </a>
             </div>
 
-
+		<div class="setting_el_block">
             <div class="material-symbols-outlined dropdown-icons">settings
                 <div class="settings-elements dropdown-elements">
                     <h2>Настройки</h2>
@@ -457,7 +472,8 @@ function playAgain() {
                         </div>
                     </section>
                 </div>
-            </div>                    
+            </div>  
+		</div>                  
         </header>
 
 
