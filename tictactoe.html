@@ -387,7 +387,7 @@ var game;
 
 function getAutoPlayerClass() {
 	// const urlParams = new URLSearchParams(window.location.search);
-	const playerOptions = ['random', 'smart', 'garfield'];
+	const playerOptions = ['random', 'smart', 'garfield', 'cyborg'];
 	idx = Math.floor(Math.random()*playerOptions.length);
 	player = playerOptions[idx];   //urlParams.get('player');
 	console.log(player);
@@ -403,6 +403,7 @@ function onLoad() {
 }
 
 function playAgain() {
+	game = new Game(getAutoPlayerClass());
 	game.reset();
 	makeVisible("playAgain", false);
 }
