@@ -202,6 +202,7 @@ function RandomPlayer(board) {
 				availableCells.push(n);
 			}
 		}
+		console.log(availableCells);
 		return availableCells;
 	}
 	
@@ -210,8 +211,10 @@ function RandomPlayer(board) {
 		
 		// move randomly into any available cell
 		availableCells = getAvailableCells();
-		idx = Math.round(Math.random()*availableCells.length);
+		idx = Math.floor(Math.random()*availableCells.length);
+		console.log(idx);
 		cell = availableCells[idx];
+		console.log(cell);
 		return board.move(cell);
 	}
 }
@@ -373,7 +376,7 @@ var game;
 
 function getAutoPlayerClass() {
 	// const urlParams = new URLSearchParams(window.location.search);
-	const playerOptions = ['random', 'smart','skill'];
+	const playerOptions = ['random', 'random','random'];
 	idx = Math.floor(Math.random()*playerOptions.length);
 	player = playerOptions[idx];   //urlParams.get('player');
 	console.log(player);

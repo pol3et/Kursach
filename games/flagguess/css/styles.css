@@ -258,7 +258,7 @@ header h1 {
   }
   .menu .game-select-menu .game-select h2 {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .menu .game-select-menu .game-select p {
     margin: 0px;
@@ -273,15 +273,15 @@ header h1 {
   }
   .game div.grid {
     margin-bottom: 8px;
-    width: 70vw;
+    width: 48vw;
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
   .game div.grid div {
     display: block;
     margin: 0px;
-    margin-top: 10px;
-    font-size: 15px;
+    margin-top: 1px;
+    font-size: 20px;
   }
   .game img {
     width: 200px;
