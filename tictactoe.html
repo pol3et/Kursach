@@ -174,6 +174,7 @@ function Board() {
 		if (nAvailableCells == 0) {
 			winner = EMPTY;
 		}
+
 		return winner != null;
 	}
 	
@@ -194,6 +195,16 @@ function Board() {
 	}
 }
 
+function getAvailableCellsGlobal(board) {
+	availableCells = [];
+	for (n=0; n<TOTAL_CELLS; ++n) {
+		if (board.cell(n) == EMPTY) {
+			availableCells.push(n);
+		}
+	}
+	return availableCells;
+}
+
 function RandomPlayer(board) {
 	function getAvailableCells() {
 		availableCells = [];
@@ -202,7 +213,6 @@ function RandomPlayer(board) {
 				availableCells.push(n);
 			}
 		}
-		console.log(availableCells);
 		return availableCells;
 	}
 	
@@ -210,11 +220,10 @@ function RandomPlayer(board) {
 		if (board.isGameEnded()) return;
 		
 		// move randomly into any available cell
+		console.log(winningCells)
 		availableCells = getAvailableCells();
 		idx = Math.floor(Math.random()*availableCells.length);
-		console.log(idx);
 		cell = availableCells[idx];
-		console.log(cell);
 		return board.move(cell);
 	}
 }
@@ -313,6 +322,8 @@ function Game(autoPlayerClass) {
   function onClickCell(x,y) {
     if (board.isGameEnded()) return;
 	var n = y*CELLS_X+x;
+	var avc = getAvailableCellsGlobal(board);
+	if (avc.includes(n) == false) return;
     var gameEnded = board.move(n);
 
 	if (autoPlayer && !gameEnded) {
@@ -323,6 +334,7 @@ function Game(autoPlayerClass) {
 		announceWinner(board.getWinner());
 	}
   }
+
   
   function announceWinner(winner) {
 	var messageText;
@@ -331,7 +343,7 @@ function Game(autoPlayerClass) {
 		messageText = "Поздравляем! Вы победитель!";
 	}
 	else if (winner == CIRCLE) {
-		messageText = "Победил Барс Тим!\
+		messageText = "Победил Барс Тим!\<br>\
 		 Попробуйте еще раз";
 	}
 	else {
@@ -376,7 +388,7 @@ var game;
 
 function getAutoPlayerClass() {
 	// const urlParams = new URLSearchParams(window.location.search);
-	const playerOptions = ['random', 'random','random'];
+	const playerOptions = ['random', 'smart','garfield'];
 	idx = Math.floor(Math.random()*playerOptions.length);
 	player = playerOptions[idx];   //urlParams.get('player');
 	console.log(player);
