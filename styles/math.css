@@ -649,3 +649,17 @@ main h2 {
     pointer-events: all;
     color: #ffffff;
 }
+
+.footer_txt{
+    color:white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer_hearts{
+    color:var(--red);
+}
+
+.footer_link_git{
+   text-decoration: none;
+}
