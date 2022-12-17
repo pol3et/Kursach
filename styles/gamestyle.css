@@ -657,6 +657,15 @@ main h2 {
     text-align: center;
 }
 
+.footer_hearts{
+    color:var(--red);
+}
+
+.footer_link_git{
+   text-decoration: none;
+}
+
 .main{
     margin: 100px auto;
 }
+
