@@ -171,7 +171,7 @@ function Board() {
 		}
 		currentTurn = currentTurn == CROSS ? CIRCLE : CROSS;
 		--nAvailableCells;
-		if (nAvailableCells == 0) {
+		if (nAvailableCells == 0 && isWinner(CROSS) == 0) {
 			winner = EMPTY;
 		}
 
