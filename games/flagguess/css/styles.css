@@ -34,6 +34,11 @@ header h1 {
   font-family: 'Nunito', sans-serif;
 }
 
+.flag{
+  border-style: solid;
+  border-radius: 15px;
+}
+
 .menu .tagline {
   font-family: 'Helvetica';
   text-align: center;
