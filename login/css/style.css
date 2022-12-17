@@ -1,0 +1,201 @@
+/* montserrat-300 - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/montserrat-v25-latin-300.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/montserrat-v25-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/montserrat-v25-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/montserrat-v25-latin-300.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/montserrat-v25-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/montserrat-v25-latin-300.svg#Montserrat') format('svg'); /* Legacy iOS */
+  }
+  /* montserrat-regular - latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v25-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/montserrat-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/montserrat-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/montserrat-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+  }
+
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+.wrapper{
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+/* */
+
+.intro{
+    height: 100vh;
+    background-color: rgb(17, 89, 155);
+}
+
+.im1{
+    position: absolute;
+    width: 1134px;
+    height: 1024px;
+    left: 0px;
+    top: 0px;
+
+    background: url(../img/im1.png);
+}
+
+.intro_title{
+    position: absolute;
+    width: 1108px;
+    height: 179px;
+    left: 30px;
+    top: 392px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+
+.rect{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 595px;
+    height: 1024px;
+    left: 1175px;
+    top: 0px;
+
+    background: #FFF7F7;
+    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25)
+}
+
+/**/
+
+.nam{
+    position: absolute;
+    width: 512px;
+    height: 80px;
+    left: 40px;
+    top: 330px;
+
+    background: #9DDDEB;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 68px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.pas{
+    position: absolute;
+    width: 512.74px;
+    height: 80px;
+    left: 40px;
+    top: 507px;
+
+    background: #9DDDEB;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 68px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.text-log{
+    position: absolute;
+    width: 337px;
+    height: 105px;
+    left: 45px;
+    top: 237px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.text-pas{
+    position: absolute;
+    width: 337px;
+    height: 105px;
+    left: 45px;
+    top: 417px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.login_button{
+    position: absolute;
+    width: 176px;
+    height: 87px;
+    left: 210px;
+    top: 676px;
+
+    background: #9DDDEB;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 68px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.registration_button{
+    position: absolute;
+    width: 371px;
+    height: 72px;
+    left: 110px;
+    top: 804px;
+
+    background: #9DDDEB;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 68px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+
+}
+
+.login_button:hover, .login_button:focus{
+    background: #55cbe5;
+}
+
+.registration_button:hover, .login_button:focus{
+    background: #55cbe5;
+}
