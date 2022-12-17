@@ -220,7 +220,6 @@ function RandomPlayer(board) {
 		if (board.isGameEnded()) return;
 		
 		// move randomly into any available cell
-		console.log(winningCells)
 		availableCells = getAvailableCells();
 		idx = Math.floor(Math.random()*availableCells.length);
 		cell = availableCells[idx];
