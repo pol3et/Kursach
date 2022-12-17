@@ -55,7 +55,7 @@ function createTitle(msg){
     _stage.fillStyle = "#000000";
     _stage.globalAlpha = 0.4;
     _stage.fillRect(100,_puzzleHeight - 40,_puzzleWidth - 200,40);
-    _stage.fillStyle = "#aec90b";
+    _stage.fillStyle = "#000000";
     _stage.globalAlpha = 1;
     _stage.textAlign = "center";
     _stage.textBaseline = "middle";
