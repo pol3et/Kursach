@@ -84,7 +84,10 @@
         </header>
         <section class="map_itmo_bars">
             <div class="container">
-                <img src="design/mapdes2.png" alt="map" class="map_bars">
+                <img src="design/mapdes2.png" alt="map" class="map_bars" usemap="#mapdes2">
+                <map class = 'map_bars' name ='mapdes2'>
+                    <area shape = "circle" coords = "415.5,239,14" alt="loginpage" href="login.html" target = "_self">
+                </map>
             </div>
         </section>
         <footer class="footer">
@@ -109,5 +112,23 @@
                             
             </div>
         </footer>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+              $('.map_bars').maphilight();
+            });
+          </script>
+        
+        
+        
+        
+       
+    
+    
+   
 </body>
+
+
+
 </html>
