@@ -27,45 +27,48 @@
 
 html{
     box-sizing: border-box;
-}
-*, *::before, *::after{
-    box-sizing: inherit;
-}
+    max-width: 1920px;
+    max-height: 1080px;
 
-.wrapper{
+}
+/* *, *::before, *::after{
+    box-sizing: inherit;
+} */
+
+/* .wrapper{
     max-width: 1060px;
     margin: 0 auto;
-}
+} */
 
-/* */
+
 
 .intro{
-    height: 100vh;
+    height:100vh; 
     background-color: rgb(17, 89, 155);
 }
 
 .im1{
     position: absolute;
-    width: 1134px;
-    height: 1024px;
+    width: 810px;
+    height: 680px; 
     left: 0px;
     top: 0px;
 
-    background: url(../img/im1.png);
+    background: url(../img/im1.png) center center/cover no-repeat;
 }
 
 .intro_title{
     position: absolute;
-    width: 1108px;
+    width: 800px;
     height: 179px;
-    left: 30px;
-    top: 392px;
+    left: 20px;
+    top: 400px;
 
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 59px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 50px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -78,9 +81,9 @@ html{
     box-sizing: border-box;
 
     position: absolute;
-    width: 595px;
-    height: 1024px;
-    left: 1175px;
+    width: 500px;
+    height: 650px;
+    left: 800px;
     top: 0px;
 
     background: #FFF7F7;
@@ -91,10 +94,10 @@ html{
 
 .nam{
     position: absolute;
-    width: 512px;
-    height: 80px;
+    width: 350px;
+    height: 40px;
     left: 40px;
-    top: 330px;
+    top: 190px;
 
     background: #9DDDEB;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -102,16 +105,16 @@ html{
 
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .pas{
     position: absolute;
-    width: 512.74px;
-    height: 80px;
+    width: 350px;
+    height: 40px;
     left: 40px;
-    top: 507px;
+    top: 355px;
 
     background: #9DDDEB;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -119,16 +122,16 @@ html{
 
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .text-log{
     position: absolute;
-    width: 337px;
-    height: 105px;
+    width: 237px;
+    height: 100px;
     left: 45px;
-    top: 237px;
+    top: 100px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -145,7 +148,7 @@ html{
     width: 337px;
     height: 105px;
     left: 45px;
-    top: 417px;
+    top: 260px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -159,10 +162,10 @@ html{
 
 .login_button{
     position: absolute;
-    width: 176px;
-    height: 87px;
-    left: 210px;
-    top: 676px;
+    width: 126px;
+    height: 47px;
+    left: 170px;
+    top: 450px;
 
     background: #9DDDEB;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -171,15 +174,15 @@ html{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 29px;
 }
 
 .registration_button{
     position: absolute;
-    width: 371px;
-    height: 72px;
-    left: 110px;
-    top: 804px;
+    width: 258px;
+    height: 47px;
+    left: 105px;
+    top: 520px;
 
     background: #9DDDEB;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -188,7 +191,7 @@ html{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 28px;
 
 }
 
@@ -199,3 +202,4 @@ html{
 .registration_button:hover, .login_button:focus{
     background: #55cbe5;
 }
+
