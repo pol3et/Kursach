@@ -44,38 +44,6 @@ body {
     /* overflow: hidden; */
 }
 
-/* --------------------------------------------------button ----------------------------------------- */
-.container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .container img {
-    width: 300%;
-    height: auto;
-  }
-  
-  .container .btn {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    display:block;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    border: 1px solid red;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #C90842;
-    cursor: pointer;
-  }
-  
-  .container .btn:hover {
-    background-color: black;
-  }
-
-  /* -------------------------------------------------------------------------------- */
 
 #interface {
     width: 100%;
