@@ -60,7 +60,7 @@ html{
 }
 
 
-.namee{
+.reg-name{
     display: block;
     margin-top:30px ;
     /* position: absolute; */
@@ -80,7 +80,7 @@ html{
     padding-left: 20px;
 }
 
-.pas{
+.reg-log{
     display: block;
     margin-top:30px ;
     /* position: absolute; */
@@ -100,7 +100,7 @@ html{
     padding-left: 20px;
 }
 
-.pas2{
+.reg-pass{
     display: block;
     margin-top:30px ;
     /* position: absolute; */
@@ -120,7 +120,7 @@ html{
     padding-left: 20px;
 }
 
-.submit{
+.sign-up-button{
     display: block;
     margin-top:85px ;
     /* position: absolute; */
@@ -151,7 +151,7 @@ html{
     background: url(../img/im2.png);
 }
 
-.submit:hover, .submit:focus{
+.sign-up-button:hover, .submit:focus{
     background: #a8ebff;
 }
 

@@ -17,20 +17,21 @@
                 ПОМОГИТЕ КРОНБАРСУ ТИМУ ДОБРАТЬСЯ ДО СПОРТЗАЛА К СВОЕЙ КОМАНДЕ
             </div>
             <div class="rect">
-                <form class="search-form">
+                <form role="form" onsubmit="signIn(event);" autocomplete="off">
                     <fieldset>
                         <p class="search-form_info">
-                            <div class="text-log">Введите логин:</div>
-                            <input type="username" name="user_login" class="nam">
-                            <div class="text-pas">Введите пароль:</div>
-                            <input type="password" name="user_password" class="pas">
-                            <button type="submit" class="login_button" href = 'index2.html' target = '_self'>Вход</button>
-                            <button type="submit" class="registration_button" href = 'registration.html' target = '_self'>Зарегистрироваться</button>
+                            <div class="text-log">Введи логин:</div>
+                            <input id = 'login' type="username" name="user_login" class="nam">
+                            <div class="text-pas">Введи пароль:</div>
+                            <input id = 'password' type="password" name="user_password" class="pas">
+                            <button type="submit" class="login_button" href="index2.html" target = '_self'>Вход</button>
                         </p>
                     </fieldset>
                 </form>
+                <p class = 'reg-link'>Вы с Барсиком ещё не знакомы?<br> <a href="registration.html">Зарегестрируйся</a> здесь</p>
             </div>
         </section>
     </main>
+    <script type="text/javascript" src="login/js/reg.js"></script>
 </body>
 </html>

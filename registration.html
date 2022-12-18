@@ -14,13 +14,15 @@
         <section class="intro">
             <div class="rect">
                 <div class="im2"></div>
-                <form class="params">
+                <form role="form" onsubmit="signUp(event);" autocomplete="off">
                     <fieldset class="wrapp_form">
-                        
-                        <input type="text" class="namee" placeholder="Твоё имя">
-                        <input type="password" class="pas" placeholder="Введи пароль">
-                        <input type="password" class="pas2" placeholder="Повтори пароль">
-                        <button class="submit">Зарегистрироваться</button>
+
+                        <input id = 'name' type="text" class="reg-name" placeholder="Твоё имя" required>
+                        <input id = 'login' type="login" class="reg-log" placeholder="Придумай логин" required>
+                        <input id = 'password' type="password" class="reg-pass" placeholder="Придумай пароль" required>
+                        <button class="sign-up-button">Зарегистрироваться</button>
+                        <p class="reg-text">Уже есть аккаунт? <a href="login.html" class="reg-link">Войти</a></p>
+
                     </fieldset>
                 </form>
             </div>
