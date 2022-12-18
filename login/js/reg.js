@@ -1,6 +1,7 @@
 function postFetchForSignUp() {
-    let nameInput = document.querySelector("#name")
-    let usernameInput = document.querySelector("#username")
+    let nameInput = document.getElementsByClassName("namee")
+    let passwordInput = document.getElementsByClassName("pas")
+    let passwordInput2 = document.getElementsByClassName("pas2")
     fetch('http://localhost:3000/users', { // First, we make a Post fetch request where we want to store our users.
       method: 'POST',
       headers: {
@@ -9,13 +10,12 @@ function postFetchForSignUp() {
       },
       body: JSON.stringify({
         name: nameInput.value,
-        username: usernameInput.value
+        password: passwordInput.value
       })
     })
     .then(res=>res.json())
     .then(user => {
-      localStorage.clear() // If there was a user signed in, this will                                   
-                           // clear it up
+      localStorage.clear() // If there was a user signed in, this will clear it up                               
       localStorage.id = user.id  // Then we can store the id we got 
       slapUser(user)
       logOutButton()
@@ -25,14 +25,14 @@ function postFetchForSignUp() {
   signInButton.addEventListener('click', e => {
     signInForm()
     let form = signDiv.querySelector('.sign-in')
-    let usernameInput = document.querySelector("#username")
+    let passwordInput = document.querySelector(".pas")
     form.addEventListener('submit', e=>{
       e.preventDefault()
-      fetch('http://localhost:3000/users') // We make a get fetch    // request where users are stored
+      fetch('http://localhost:3000/users') // We make a get fetch request where users are stored
       .then(res=>res.json()) 
       .then(usersArray => { 
         let user = usersArray.find(function(user){ 
-            return user.username === usernameInput.value // Then we        // check if there is a user with a value given
+            return user.password === passwordInput.value // Then we        // check if there is a user with a value given
           })
         if (user){
           signDiv.innerHTML = ""
