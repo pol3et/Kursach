@@ -38,23 +38,36 @@ html{
 }
 
 .rect{
-    position: absolute;
-    width: 720px;
-    height: 967px;
-    left: 640px;
-    top: 29px;
+    
+    display: block;
+    margin:0 auto;
+    /* position: absolute; */
+    width: 600px;
+    height: 650px;
+    /* left: 640px;
+    top: 29px; */
 
     background: #11599B;
     box-shadow: inset 10px 10px 4px rgba(0, 0, 0, 0.25);
     border-radius: 68px;
 }
 
+.wrapp_form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .namee{
-    position: absolute;
-    width: 566.79px;
-    height: 94.34px;
-    left: 80px;
-    top: 212.35px;
+    display: block;
+    margin-top:30px ;
+    /* position: absolute; */
+    width: 450px;
+    height: 65px;
+    /* left: 80px;
+    top: 212.35px; */
 
     background: #D9D9D9;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -63,14 +76,16 @@ html{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 300;
-    font-size: 40px;
+    font-size: 30px;
     padding-left: 20px;
 }
 
 .pas{
-    position: absolute;
-    width: 566.79px;
-    height: 94.34px;
+    display: block;
+    margin-top:30px ;
+    /* position: absolute; */
+    width: 450px;
+    height: 65px;
     left: 80px;
     top: 362px;
 
@@ -81,14 +96,16 @@ html{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 300;
-    font-size: 40px;
+    font-size: 30px;
     padding-left: 20px;
 }
 
 .pas2{
-    position: absolute;
-    width: 566.79px;
-    height: 94.34px;
+    display: block;
+    margin-top:30px ;
+    /* position: absolute; */
+    width: 450px;
+    height: 65px;
     left: 80px;
     top: 511.99px;
     
@@ -99,14 +116,16 @@ html{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 300;
-    font-size: 40px;
+    font-size: 30px;
     padding-left: 20px;
 }
 
 .submit{
-    position: absolute;
-    width: 358px;
-    height: 94px;
+    display: block;
+    margin-top:85px ;
+    /* position: absolute; */
+    width: 450px;
+    height: 65px;
     left: 190px;
     top: 711px;
 
@@ -116,12 +135,14 @@ html{
 
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 30px;
 }
 
 .im2{
-    position: absolute;
+    display: block;
+    margin:0 auto;
+    /* position: absolute; */
     width: 112px;
     height: 112px;
     left: 310px;
