@@ -36,7 +36,7 @@ function signIn(e) {
       alert("Барсик не знает такого человека :(\n\nПопробуй еще раз или зарегистрируй новый аккаунт.");
   }
   else{
-      location.href = "tim_message/tim_message1.html";
+      location.href = "tim_message1.html";
   }
   e.preventDefault();
 }
