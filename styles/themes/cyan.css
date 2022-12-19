@@ -12,7 +12,7 @@ a:visited {
 }
 
 #check-button {
-    color: var(--theme-color);
+    color: #ffffffda;
     background: rgba(0, 0, 0, 0.7);
 }
 
@@ -31,7 +31,9 @@ a:visited {
 }
 
 .positive-comment {
-    color: lightgreen;
+    color: rgba(1, 14, 1, 0.655);
+    background-color: #74f58e45;
+    border-radius: 10px;
 }
 
 .incorrect-comment {

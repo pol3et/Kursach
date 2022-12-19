@@ -6,3 +6,5 @@ const MyAccount = e => {
     document.getElementById('uname').innerHTML = uname;
     document.getElementById('score-count').innerHTML = score;
 }
+var uname = localStorage.getItem('uname');
+document.getElementById('uname').innerHTML = uname;

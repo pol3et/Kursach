@@ -48,8 +48,8 @@ html{
 
 .im4{
     position: absolute;
-    width: 480px;
-    height: 390px; 
+    width: 600px;
+    height: 500px; 
     left: 457px;
     top: 20px;
     background: url(../../img/im4.png) center center/cover no-repeat;
@@ -58,15 +58,15 @@ html{
 
 .message{
     position: absolute;
-    width: 428px;
-    height: 113px;
-    left: 50px;
-    top: 100px;
+    width: 500px;
+    height: 400px;
+    left: 70px;
+    top: 10px;
     
-    font-family: 'Montserrat';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 24px;
     display: flex;
     align-items: center;
@@ -78,8 +78,8 @@ html{
     position: absolute;
     width: 120px;
     height: 29px;
-    left: 170px;
-    top: 230px;
+    left: 190px;
+    top: 340px;
     
     background: #9DDDEB;
     backdrop-filter: blur(2px);
