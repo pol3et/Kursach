@@ -339,7 +339,10 @@ function Game(autoPlayerClass) {
 	var messageText;
 	
 	if (winner == CROSS) {
-		messageText = "Поздравляем! Вы победили!";
+		messageText = "Поздравляю! Ты победил!";
+		setTimeout(function() { alert("Поздравляю, друг! Ты победил меня в моей любимой игре и доказал высокий уровень интеллекта! Буду рад поиграть с тобой снова!");
+		location.href = "index6.html"; }, 100);
+		
 	}
 	else if (winner == CIRCLE) {
 		messageText = "Победил Барс Тим!\<br>\

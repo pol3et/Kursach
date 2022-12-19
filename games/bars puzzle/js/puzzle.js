@@ -1,3 +1,4 @@
+// import {showIt} from 'scripts/popup2.js';
 var PUZZLE_DIFFICULTY = 4;
 var PUZZLE_HOVER_TINT = '#58a7d3';
 
@@ -48,6 +49,9 @@ function initPuzzle(){
     _currentDropPiece = null;
     _stage.drawImage(_img, 0, 0, _puzzleWidth, _puzzleHeight, 0, 0, _puzzleWidth, _puzzleHeight);
     createTitle("Нажми чтобы начать игру!");
+    var previousScrore = localStorage.getItem('score');
+    var currentScore = previousScrore + 15;
+    localStorage.setItem('score', currentScore);
     buildPieces();
 }
 function createTitle(msg){
@@ -215,9 +219,24 @@ function resetPuzzleAndCheckWin(){
         }
     }
     if(gameWin){
-        setTimeout(gameOver,500);
+        setTimeout(showIt,100)
+        setTimeout(gameOver,1000);
     }
 }
+
+function showIt() {
+    document.getElementById("popup3").disabled = false;
+    document.getElementById("popup3").style.visibility = "visible";
+    window.addEventListener("load", function(){
+        setTimeout(
+            function open(event){
+                document.querySelector(".popup3").style.display = "block";
+            },
+            10
+        )
+    });
+  }
+
 function gameOver(){
     'use strict';
     document.onmousedown = null;
@@ -226,7 +245,9 @@ function gameOver(){
     document.getElementById('canvas').ontouchmove = null;
     document.onmouseup = null;
     document.getElementById('canvas').ontouchend = null;
-    alert('Победа!');
+    alert('Победа! Вы получаете 15 очков!');
+    location.href = "index4.html";
+    showIt();
     initPuzzle();
 }
 function shuffleArray(o){

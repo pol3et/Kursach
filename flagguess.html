@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Play:wght@400;700&display=swap"
             rel="stylesheet">
+    <link rel="stylesheet" href="styles/popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -67,13 +69,12 @@
                     <h2>Настройки</h2>
                     <section>
                         <div>
-                            <h3>Выбор игры</h3>
+                            <h3></h3>
                             <nav class="input-settings-group">
                                 <ul>
-                                    <li><a href='mathgame.html'>Mathgame</a></li>
-                                    <li><a href='flagguess.html'>FlagGuess</a></li>
-                                    <li><a href='tictactoe.html'>TicTacToe</a></li>
-                                    <li><a href='barspuzzle.html'>BarsPuzzle</a></li>
+                                    <ul>
+                                        <li><a>Кажется Барсик <br> забыл вставить <br> сюда настройки :(</a></li>
+                                    </ul>
                                 </ul>
                             </nav>
                         </div>
@@ -83,19 +84,37 @@
         </div>                   
         </header>
 
+<div id = 'popup4' class="popup4">
+    <!-- <button id="close">&times;</button> -->
+    <h2>Угадай страну по флагу!</h2>
+    <p>
+        Угадай как можно больше стран за 20 секунд. Отсчёт начнётся после нажатия на кнопку снизу.<br><br><br><br><br><br><br><br><br><br>
+    <a id="close4">Я готов</a>
+</div>
+
+<div id = 'popup3' class="popup3" style="display: block; visibility: hidden" disabled = true;>
+    <!-- <button id="close">&times;</button> -->
+    <h2>Угадай страну по флагу!</h2>
+    <p>
+        Поздравляю! <br> Ты узнал <span id="stranc" class="scount">7</span> стран из 15 <br> И заработал <span id="monc" class="m-score-count"> 70 </span> монеток, так держать!<br> Поехали дальше!<br><br><br><br><br><br><br><br><br>
+    <a onclick="showStats2(event);">Узнать счёт</a>
+    <a href = 'index5.html'>Поехали!</a>
+</div>
+    
+
 	<div class="menu">
 
 		<p class="tagline"></p>
 		<div class="game-select-menu">
-		<div class="game-select">
+		<div id = 'gamestart' class="game-select">
 			<img src="/games/flagguess/assets/images/aim.png" alt="One Shot One Kill">
 			<h2>Всё и сразу</h2>
-			<p>В этом режиме игры вы не имеете права ошибиться</p>
+			<p>Игра с таймером, нажми сюда, если готов бросить выбор!</p>
 		</div>
 		<div class="game-select">
 			<img class="infinity" src="/games/flagguess/assets/images/infinity.png" alt="Spray and Prey">
 			<h2>Режим обучения</h2>
-			<p>Здесь вы можете узнать новые для себя флаги стран</p>
+			<p>Здесь ты можешь узнать новые для себя флаги стран</p>
 		</div>
 	</div>
 	</div>
@@ -127,7 +146,7 @@
     <div class="footer_txt">&copy; 2022 BARSkids | Made with <span class="footer_hearts">&hearts;</span> by <a href="https://github.com/meowmeowmeower/Kursach.git" target="_blank" class="footer_link_git">Mobilki</a></div>
 </footer>
 
-
+<script src="scripts/popup2.js" type="text/javascript"></script>
 <script src="/games/flagguess/js/app.js" type="text/javascript"></script>
 </body>
 </html>

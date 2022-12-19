@@ -22,6 +22,8 @@
         <link rel="icon" type="image/png" href="games/bars puzzle/img/icons/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="games/bars puzzle/img/icons/favicon-96x96.png" sizes="96x96">
         <link rel="icon" type="image/png" href="games/bars puzzle/img/icons/android-chrome-192x192.png" sizes="192x192">
+        <link rel="stylesheet" href="styles/popup.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <meta name="msapplication-square70x70logo" content="games/bars puzzle/img/icons/smalltile.png"/>
         <meta name="msapplication-square150x150logo" content="games/bars puzzle/img/icons/mediumtile.png"/>
         <meta name="msapplication-wide310x150logo" content="games/bars puzzle/img/icons/widetile.png"/>
@@ -50,6 +52,14 @@
 
 
     <body onload="init(4);">
+
+        <div id = 'popup3' class="popup3" style="display: block; visibility: hidden">
+            <!-- <button id="close">&times;</button> -->
+            <h2>Математическая западня</h2>
+            <p>
+                Поздравляю! <br> Ты решил пазл и заработал 15 очков, так держать!<br> Поехали дальше!<br><br><br><br><br><br><br><br><br>
+            <a href = 'index4.html'>Поехали!</a>
+        </div>
 
 
         <div id="interface">
@@ -98,13 +108,10 @@
                 <div class="setting_el_block">
                     <div class="material-symbols-outlined dropdown-icons">settings
                         <div class="settings-elements dropdown-elements">
-                                    <h3>Выбор игры</h3>
+                                    <h3>Настройки</h3>
                                     <nav class="input-settings-group">
                                         <ul>
-                                            <li><a href='mathgame.html'>Mathgame</a></li>
-                                            <li><a href='flagguess.html'>FlagGuess</a></li>
-                                            <li><a href='tictactoe.html'>TicTacToe</a></li>
-                                            <li><a href='barspuzzle.html'>BarsPuzzle</a></li>
+                                            <li><a>Кажется Барсик <br> забыл вставить <br> сюда настройки :(</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -123,6 +130,7 @@
         <footer class="footer_pazls">
             <div class="footer_txt">&copy; 2022 BARSkids | Made with <span class="footer_hearts">&hearts;</span> by <a href="https://github.com/meowmeowmeower/Kursach.git" target="_blank" class="footer_link_git">Mobilki</a></div>
         </footer>
+        <script type='text/javascript' src='scripts/popup2.js'></script>
         <!-- jQuery -->
         <script src="//code.jquery.com/jquery.js"></script>
         <!-- Bootstrap JavaScript -->
