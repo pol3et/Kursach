@@ -1,8 +1,8 @@
 
 const MyAccount = e => {
-    var name = JSON.parse(localStorage.getItem('uname')) || 'Гость';
-    var score = JSON.parse(localStorage.getItem('score')) || 0;
+    var uname = localStorage.getItem('uname');
+    var score = localStorage.getItem('score');
 
-    document.getElementById('uname').innerHTML = name;
+    document.getElementById('uname').innerHTML = uname;
     document.getElementById('score-count').innerHTML = score;
 }

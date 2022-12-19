@@ -2,7 +2,7 @@ const signUp = e => {
   let name = document.getElementById('name').value,
       login = document.getElementById('login').value,
       password = document.getElementById('password').value;
-  let score = 42;
+  let score = 666;
 
   let formData = JSON.parse(localStorage.getItem('formData')) || [];
 
