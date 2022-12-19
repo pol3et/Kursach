@@ -6,7 +6,7 @@
     --brown: #A52A2A;
     --coral: #FF7F50;
     --crimson: #DC143C;
-    --cyan: #00FFFF;
+    --cyan: #43b1909f;
     --gray: #808080;
     --green: #008000;
     --indianred: #CD5C5C;
@@ -442,14 +442,17 @@ footer p:first-child {
 
 main h2 {
     font-size: clamp(1rem, 1.7rem, 2.5rem);
-    color: #ffffff99;
-    /*color: rgba(0, 0, 0, 0.5);*/
+    color: rgba(0, 0, 0, 0.666);
     text-align: center;
+    text-shadow: 1px 0 rgba(255, 255, 255, 0.555), -1px 0 rgba(255, 255, 255, 0.555), 0 1px rgba(255, 255, 255, 0.555), 0 -1px rgba(255, 255, 255, 0.555),
+               1px 1px rgba(255, 255, 255, 0.555), -1px -1px rgba(255, 255, 255, 0.555), 1px -1px rgba(255, 255, 255, 0.555), -1px 1px rgba(255, 255, 255, 0.555);
 }
 
 .numbering {
-    color: #ffffff99;
+    color: rgba(0, 0, 0, 0.666);
     text-align: center;
+    text-shadow: 1px 0 rgba(0, 0, 0, 0.666), -1px 0 rgba(0, 0, 0, 0.666), 0 1px rgba(0, 0, 0, 0.666), 0 -1px rgba(0, 0, 0, 0.666),
+               1px 1px rgba(0, 0, 0, 0.666), -1px -1px rgba(0, 0, 0, 0.666), 1px -1px rgba(0, 0, 0, 0.666), -1px 1px rgba(0, 0, 0, 0.666);
 }
 
 #numbering-completed {
@@ -472,7 +475,9 @@ main h2 {
 }
 
 .numbers {
-    color: #ffffff;
+    color: #ffffffda;
+    text-shadow: 1px 0 rgba(0, 0, 0, 0.666), -1px 0 rgba(0, 0, 0, 0.666), 0 1px rgba(0, 0, 0, 0.666), 0 -1px rgba(0, 0, 0, 0.666),
+               1px 1px rgba(0, 0, 0, 0.666), -1px -1px rgba(0, 0, 0, 0.666), 1px -1px rgba(0, 0, 0, 0.666), -1px 1px rgba(0, 0, 0, 0.666);
 }
 
 #equation-container {
@@ -504,7 +509,7 @@ main h2 {
     height: auto;
 }
 .operators {
-    color: #ffffff99;
+    color: #ffffffaa;
 }
 
 #answer-comment {

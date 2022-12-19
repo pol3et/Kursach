@@ -1,0 +1,224 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.popup body{
+    background-color: #0f72e5;
+}
+.popup{
+    background-color: #ffffffd5;
+    width: 500px;
+    padding: 30px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    display: none;
+    text-align: center;
+    line-height: 25px;
+}
+.popup button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup button:hover{
+    color: #0f72e5;
+}
+.popup p{
+    font-size: 20px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 20px;
+}
+.popup a{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+    color: #ffffffda;
+    text-decoration: none;
+    padding: 5px 0;
+    border-radius: 8px;
+    line-height: 20px;
+}
+.popup a:hover{
+    background-color: #cccbcbda;
+    color: #0f72e5;
+}
+/* PopUp2 */
+.popup2 body{
+    background-color: #0f72e5;
+}
+.popup2{
+    background-color: #ffffffd5;
+    width: 500px;
+    padding: 30px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    display: none;
+    text-align: center;
+    line-height: 25px;
+}
+.popup2 button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup2 button:hover{
+    color: #0f72e5;
+}
+.popup2 p{
+    font-size: 20px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 20px;
+}
+.popup2 a{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+    color: #ffffffda;
+    text-decoration: none;
+    padding: 5px 0;
+    border-radius: 8px;
+    line-height: 20px;
+}
+.popup2 a:hover{
+    background-color: #cccbcbda;
+    color: #0f72e5;
+}
+
+/* PopUp3 */
+.popup3 body{
+    background-color: #0f72e5;
+}
+.popup3{
+    background-color: #ffffffd5;
+    width: 600px;
+    padding: 30px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    display: none;
+    text-align: center;
+    line-height: 30px;
+}
+.popup3 button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup3 button:hover{
+    color: #0f72e5;
+}
+.popup3 p{
+    font-size: 20px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 20px;
+}
+.popup3 a{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+    color: #ffffffda;
+    text-decoration: none;
+    padding: 5px 0;
+    border-radius: 8px;
+    line-height: 20px;
+}
+.popup3 a:hover{
+    background-color: #cccbcbda;
+    color: #0f72e5;
+}
+
+/* PopUp4 */
+.popup4 body{
+    background-color: #0f72e5;
+}
+.popup4{
+    background-color: #ffffffd5;
+    width: 600px;
+    padding: 30px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%; 
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    display: none;
+    text-align: center;
+    line-height: 30px;
+}
+.popup4 button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup4 button:hover{
+    color: #0f72e5;
+}
+.popup4 p{
+    font-size: 20px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 20px;
+}
+.popup4 a{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+    color: #ffffffda;
+    text-decoration: none;
+    padding: 5px 0;
+    border-radius: 8px;
+    line-height: 20px;
+}
+.popup4 a:hover{
+    background-color: #cccbcbda;
+    color: #0f72e5;
+}

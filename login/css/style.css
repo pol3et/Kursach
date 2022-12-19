@@ -50,7 +50,7 @@ html{
 .im1{
     position: absolute;
     width: 810px;
-    height: 680px; 
+    height: 670px; 
     left: 0px;
     top: 0px;
 
@@ -81,8 +81,8 @@ html{
     box-sizing: border-box;
 
     position: absolute;
-    width: 500px;
-    height: 650px;
+    width: 450px;
+    height: 620px;
     left: 800px;
     top: 0px;
 
@@ -201,5 +201,28 @@ html{
 
 .registration_button:hover, .login_button:focus{
     background: #55cbe5;
+}
+
+.reg_link{
+    position: absolute;
+    top: 520px;
+    left: 95px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.adress_reg{
+    text-decoration: none;
+    text-shadow: 3px 6px 5px rgb(153, 153, 153);
+    color:#000000;
+}
+
+.adress_reg:hover{
+    background-color: #55cbe5;
+    border-radius: 40px;
+    box-shadow: 3px 3px 4px rgb(153, 153, 153);
 }
 
