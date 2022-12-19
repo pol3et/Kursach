@@ -13,12 +13,3 @@ document.querySelector("#close").addEventListener("click", function(){
 document.querySelector("#close2").addEventListener("click", function(){
     document.querySelector(".popup").style.display = "none";
 });
-
-document.querySelector("#close").addEventListener("click", function(){
-    document.querySelector(".popup2").style.display = "none";
-});
-document.querySelector("#close2").addEventListener("click", function(){
-    document.querySelector(".popup2").style.display = "none";
-});
-
-

@@ -14,7 +14,6 @@ document.querySelector("#close4").addEventListener("click", function(){
 
 function showIt() {
     document.getElementById("popup3").disabled = false;
-    document.getElementById("ksc").area-disabled = false;
     document.getElementById("popup3").style.visibility = "visible";
   }
  // after 60 seconds
