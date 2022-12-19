@@ -18,8 +18,27 @@
             rel="stylesheet">
     <!--  Site styles  -->
     <link rel="stylesheet" href="styles/math.css">
+    <link rel="stylesheet" href="styles/popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id = 'popup4' class="popup4">
+        <!-- <button id="close">&times;</button> -->
+        <h2>Математическая западня</h2>
+        <p>
+            Реши как можно уравнений за 60 секунд. Отсчёт начнётся после нажатия на кнопку снизу.<br><br><br><br><br><br><br><br><br><br>
+        <a id="close4">Я готов</a>
+    </div>
+
+    <div id = 'popup3' class="popup3" style="display: block; visibility: hidden" disabled = true;>
+        <!-- <button id="close">&times;</button> -->
+        <h2>Математическая западня</h2>
+        <p>
+            Поздравляю! <br> Ты решил <span id="s-equation-counter" class="s-eqcount">0</span> уравнений <br> И заработал <span id="m-score" class="m-score-count"> 0 </span> монеток, так держать!<br> Поехали дальше!<br><br><br><br><br><br><br><br><br>
+        <a onclick="showStats(event);">Узнать счёт</a>
+        <a href = 'index3.html'>Поехали!</a>
+    </div>
+
 <div id="interface">
     <header>
         <div>
@@ -72,7 +91,7 @@
             </div>
         </div>
         <div>
-            <a href="index.html" id="app-name-link">
+            <a id="app-name-link">
                 <h1 id="app-name">
                     <div class="app-letters-wrapper">
                         <span class="blue">B</span>
@@ -131,19 +150,6 @@
                                 <option value="yellow">Жёлтый</option> -->
                             </select>
                         </div>
-                        <section>
-                            <div>
-                                <h3>Выбор игры</h3>
-                                <nav class="input-settings-group">
-                                    <ul>
-                                        <li><a href='mathgame.html'>Mathgame</a></li>
-                                        <li><a href='flagguess.html'>FlagGuess</a></li>
-                                        <li><a href='tictactoe.html'>TicTacToe</a></li>
-                                        <li><a href='barspuzzle.html'>BarsPuzzle</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </section>
 <!--                        <div class="input-settings-group">-->
 <!--                            <label for="font-selector">Font</label>-->
 <!--                            <select id="font-selector">-->
@@ -345,6 +351,8 @@
         </p>
     </footer>
 </div>
+
+<script type="text/javascript" src="scripts/popup2.js"></script>
 <script type="module" src="scripts/main.js"></script>
 <!--<script src="scripts/theme-switcher.js"></script>-->
 </body>

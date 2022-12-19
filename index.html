@@ -17,10 +17,22 @@
             rel="stylesheet">
     <!--  Map StyleSheet  -->
     <link rel="stylesheet" href="styles/mapstyle.css">
+    <link rel="stylesheet" href="styles/popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 
 <body>
+    <div class="popup">
+        <button id="close">&times;</button>
+        <h2>Привет, мы с тобой пока незнакомы!</h2>
+        <p>
+            Давай я представлюсь. <br> Меня зовут Барс Тим, я – маскот всех сборных в ИТМО и, по совместительству, главный герой этой игры.
+            Я очень люблю спорт и хочу стать профессиональным спортсменом. Но мне нужна твоя помощь, чтобы добраться до спортзала к своей команде.<br> Помоги мне, пожалуйста!
+        </p>
+        <a href="login.html">Познакомиться с Барсиком</a>
+    </div>
+
     <div id="interface">
         <header>
             <div class="container">
@@ -63,18 +75,20 @@
             </div>
 
 
-            <div class="material-symbols-outlined dropdown-icons">settings
+            <div class="material-symbols-outlined dropdown-icons" onclick="MyAccount(event);">account_circle
                 <div class="settings-elements dropdown-elements">
-                    <h2>Настройки</h2>
+                    <h2>Мой аккаунт</h2>
                     <section>
                         <div>
-                            <h3>Выбор игры</h3>
+                            <h3><span id = 'uname' class = 'name'>Username</span></h3>
                             <nav class="input-settings-group">
                                 <ul>
-                                    <li><a href='mathgame.html'>Mathgame</a></li>
-                                    <li><a href='flagguess.html'>FlagGuess</a></li>
-                                    <li><a href='tictactoe.html'>TicTacToe</a></li>
-                                    <li><a href='barspuzzle.html'>BarsPuzzle</a></li>
+                                    <li> Твои монетки:
+                                        <span id = "score-count" class="score">0</span><span class="material-symbols-outlined">
+                                            database
+                                            </span>
+                                    </li>
+                                    <li><a href='login.html'>Выйти из аккаунта</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -113,13 +127,15 @@
             </div>
         </footer>
 
-    <script type="text/javascript">
-      $(function() {
-        $('.map_bars').maphilight();
-      });
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+        <script type="text/javascript" src="scripts/popup.js"></script>
+        <script type="text/javascript" src="scripts/account.js"></script>
+        <script type="text/javascript">
+          $(function() {
+            $('.map_bars').maphilight();
+          });
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
 </body>
 
 

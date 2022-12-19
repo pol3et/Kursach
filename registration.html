@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BarsKids</title>
+    <link rel="shortcut icon" href="design/head_ico.ico" type="image/x-icon">
     <link rel="stylesheet" href="login/css/reset.css">
     <link rel="stylesheet" href="login/css/reg_style.css">
 </head>
@@ -13,16 +14,21 @@
         <section class="intro">
             <div class="rect">
                 <div class="im2"></div>
-                <form class="params">
-                    <fieldset>
-                        <input type="text" class="namee" placeholder="Твоё имя">
-                        <input type="text" class="lnamee" placeholder="Твоя фамилия">
-                        <input type="text" class="pas" placeholder="Введи пароль">
-                        <button class="submit">Зарегистрироваться</button>
+                <form role="form" onsubmit="signUp(event);" autocomplete="off">
+                    <fieldset class="wrapp_form">
+
+                        <input id = 'name' type="text" class="reg-name" placeholder="Твоё имя" required>
+                        <input id = 'login' type="login" class="reg-log" placeholder="Придумай логин" required>
+                        <input id = 'password' type="password" class="reg-pass" placeholder="Придумай пароль" required>
+                        <button class="sign-up-button">Зарегистрироваться</button>
+                        <div class="reg_text">Уже есть аккаунт? <a href="login.html" class="reg_link">Войти</a></div>
+
                     </fieldset>
                 </form>
             </div>
         </section>
     </main>
+
+    <script type="text/javascript" src="login/js/reg.js"></script>
 </body>
 </html>

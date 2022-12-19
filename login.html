@@ -14,12 +14,13 @@
         <section class="intro">
             <div class="im1"></div>
             <div class="intro_title">
-                ПОМОГИТЕ КРОНБАРСУ ТИМУ ДОБРАТЬСЯ ДО СПОРТЗАЛА К СВОЕЙ КОМАНДЕ
+                <p>ПОМОГИТЕ КРОНБАРСУ ТИМУ ДОБРАТЬСЯ ДО СПОРТЗАЛА К СВОЕЙ КОМАНДЕ <br> Барсик просит тебя отключить AdBlock <br> (сильно, сильно)</p>
             </div>
             <div class="rect">
-                <form class="search-form">
+                <form role="form" onsubmit="signIn(event);" autocomplete="off">
                     <fieldset>
                         <p class="search-form_info">
+
                             <div class="text-log">Введите логин:</div>
                             <input type="text" name="user_login" class="nam">
                             <div class="text-pas">Введите пароль:</div>
@@ -29,8 +30,10 @@
                         </p>
                     </fieldset>
                 </form>
+                <div class ="reg_link">Вы с Барсиком ещё не знакомы?<br> <a href="registration.html" class="adress_reg">Зарегистрируйся</a> здесь</div>
             </div>
         </section>
     </main>
+    <script type="text/javascript" src="login/js/reg.js"></script>
 </body>
 </html>

@@ -39,32 +39,34 @@ html{
 
 .im3{
     position: absolute;
-    width: 917px;
-    height: 658px;
-    top: 361px;
-    background: url(../../img/im3.png);
+     width: 700px;
+    height: 469px;
+     top: 284px; 
+    background: url(../../img/im3.png)center center/cover no-repeat;
+    background-size:cover;
 }
 
 .im4{
     position: absolute;
-    width: 731px;
-    height: 596px;
+    width: 600px;
+    height: 500px; 
     left: 457px;
-    top: 64px;
-    background: url(../../img/im4.png);
+    top: 20px;
+    background: url(../../img/im4.png) center center/cover no-repeat;
+    background-size:cover;
 }
 
 .message{
     position: absolute;
-    width: 428px;
-    height: 113px;
-    left: 170px;
-    top: 200px;
+    width: 500px;
+    height: 400px;
+    left: 70px;
+    top: 10px;
     
-    font-family: 'Montserrat';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 24px;
     display: flex;
     align-items: center;
@@ -74,10 +76,10 @@ html{
 
 .submit{
     position: absolute;
-    width: 192px;
-    height: 49px;
-    left: 230px;
-    top: 350px;
+    width: 120px;
+    height: 29px;
+    left: 190px;
+    top: 340px;
     
     background: #9DDDEB;
     backdrop-filter: blur(2px);
