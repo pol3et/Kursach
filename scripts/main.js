@@ -548,6 +548,11 @@ import { switchTheme, reloadTheme } from "./theme-switcher.js";
                 styleAnswer(1);
                 equationData.isCorrect = true;
                 equationData.eqcounter = eqcounter++;
+                localStorage.setItem("eqc", eqcounter);
+                console.log(eqcounter);
+
+
+
                 // enableButton(nextButton);
 
                 setTimeout(() => {
@@ -563,6 +568,9 @@ import { switchTheme, reloadTheme } from "./theme-switcher.js";
     };
 
     checkAnswer();
+
+
+
 
 
     // reset the answer element when the reset button or next button is clicked

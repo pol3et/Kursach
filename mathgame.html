@@ -18,8 +18,27 @@
             rel="stylesheet">
     <!--  Site styles  -->
     <link rel="stylesheet" href="styles/math.css">
+    <link rel="stylesheet" href="styles/popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id = 'popup4' class="popup4">
+        <!-- <button id="close">&times;</button> -->
+        <h2>Математическая западня</h2>
+        <p>
+            Реши как можно уравнений за 60 секунд. Отсчёт начнётся после нажатия на кнопку снизу.<br><br><br><br><br><br><br><br><br><br>
+        <a id="close4">Я готов</a>
+    </div>
+
+    <div id = 'popup3' class="popup3" style="display: block; visibility: hidden" onclick="showStats(event);">
+        <!-- <button id="close">&times;</button> -->
+        <h2 onclick="showStats(event);">Математическая западня</h2>
+        <p onclick="showStats(event);">
+            Поздравляю! <br> Ты решил <span id="s-equation-counter" class="s-eqcount">0</span> уравнений <br> И заработал <span id="m-score" class="m-score-count"> 0 </span> монеток, так держать!<br> Поехали дальше!<br><br><br><br><br><br><br><br><br>
+        <a onclick="showStats(event);">Узнать счёт</a>
+        <a href = 'index3.html'>Поехали!</a>
+    </div>
+
 <div id="interface">
     <header>
         <div>
@@ -332,6 +351,8 @@
         </p>
     </footer>
 </div>
+<script type="text/javascript" src="scripts/account.js"></script>
+<script type="text/javascript" src="scripts/popup.js"></script>
 <script type="module" src="scripts/main.js"></script>
 <!--<script src="scripts/theme-switcher.js"></script>-->
 </body>

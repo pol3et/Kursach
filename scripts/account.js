@@ -8,3 +8,5 @@ const MyAccount = e => {
 }
 var uname = localStorage.getItem('uname');
 document.getElementById('uname').innerHTML = uname;
+
+
