@@ -25,6 +25,7 @@ document.querySelector("#close").addEventListener("click", function(){
 });
 document.querySelector("#close2").addEventListener("click", function(){
     document.querySelector(".popup").style.display = "none";
+<<<<<<< HEAD
 });
 
 function showIt() {
@@ -60,3 +61,6 @@ localStorage.setItem('score', currentScore);
 document.getElementById('s-equation-counter').innerHTML = seqcounter;
 document.getElementById('m-score').innerHTML = mscore;
 
+=======
+});
+>>>>>>> 8e851b960f854bdcd46100d3f38c7e052292979e
