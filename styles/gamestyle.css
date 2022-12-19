@@ -403,6 +403,18 @@ main {
     flex-grow: 1;
 }
 
+.menu-icons{
+    display: block;
+    padding-top: 50px ;
+    padding-left: 20px;
+}
+
+.setting_el_block{
+    display: block;
+    padding-top: 50px ;
+    padding-left: 20px;
+}
+
 footer {
     font-family: 'Inter', sans-serif;
     width: 100%;
@@ -668,3 +680,8 @@ main h2 {
 .main{
     margin: 100px auto;
 }
+.footer_pazls{
+    margin-top: 700px;
+    font-size: 15px;
+}
+

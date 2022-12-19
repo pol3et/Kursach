@@ -150,10 +150,10 @@ let shuffleArray = function(arr){
 // Function which generates a question and their 4 options
 let questionArrayGenerator = function(arr,correctIndex){
     let quesArr = [], count = 0, tempIndex;
-    while(count<=2){
+    while(count<3){
         tempIndex = Math.floor(Math.random()*arr.length);
         
-        if(correctIndex!=tempIndex && !(arr[tempIndex] in quesArr)){
+        if(correctIndex!=tempIndex && !(quesArr.includes(arr[tempIndex]))){
             quesArr.push(arr[tempIndex]);
             count+=1;
         }

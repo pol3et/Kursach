@@ -28,8 +28,8 @@
         <meta name="msapplication-square310x310logo" content="games/bars puzzle/img/icons/largetile.png"/>
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
+        <!--Я НЕ ЗНАЮ ЧЕ ЭТА ЕБОЛА ДЕЛАЕТ НО Я ЕЕ ЗАКОММЕНТИЛ И ВСЕ ИСПРАВИЛОСЬ-->
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -95,28 +95,34 @@
                     </a>
                 </div>
     
-    
-                <div class="material-symbols-outlined dropdown-icons">settings
-                    <div class="settings-elements dropdown-elements">
-                                <h3>Выбор игры</h3>
-                                <nav class="input-settings-group">
-                                    <ul>
-                                        <li><a href='mathgame.html'>Mathgame</a></li>
-                                        <li><a href='flagguess.html'>FlagGuess</a></li>
-                                        <li><a href='tictactoe.html'>TicTacToe</a></li>
-                                        <li><a href='barspuzzle.html'>BarsPuzzle</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </section>
-                    </div>
-                </div>                    
+                <div class="setting_el_block">
+                    <div class="material-symbols-outlined dropdown-icons">settings
+                        <div class="settings-elements dropdown-elements">
+                                    <h3>Выбор игры</h3>
+                                    <nav class="input-settings-group">
+                                        <ul>
+                                            <li><a href='mathgame.html'>Mathgame</a></li>
+                                            <li><a href='flagguess.html'>FlagGuess</a></li>
+                                            <li><a href='tictactoe.html'>TicTacToe</a></li>
+                                            <li><a href='barspuzzle.html'>BarsPuzzle</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </section>
+                        </div>
+                    </div> 
+                </div>                       
             </header>
         </div>
-
+       
         <div class="puzzle-wrapper">
             <canvas id="canvas"></canvas>
         </div>
+    
+
+        <footer class="footer_pazls">
+            <div class="footer_txt">&copy; 2022 BARSkids | Made with <span class="footer_hearts">&hearts;</span> by <a href="https://github.com/meowmeowmeower/Kursach.git" target="_blank" class="footer_link_git">Mobilki</a></div>
+        </footer>
         <!-- jQuery -->
         <script src="//code.jquery.com/jquery.js"></script>
         <!-- Bootstrap JavaScript -->
