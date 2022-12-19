@@ -9,3 +9,6 @@ window.addEventListener("load", function(){
 document.querySelector("#close").addEventListener("click", function(){
     document.querySelector(".popup").style.display = "none";
 });
+document.querySelector("#close2").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
