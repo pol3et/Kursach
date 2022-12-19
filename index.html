@@ -63,15 +63,17 @@
             </div>
 
 
-            <div class="material-symbols-outlined dropdown-icons">account_circle
+            <div class="material-symbols-outlined dropdown-icons" onclick="MyAccount(event);">account_circle
                 <div class="settings-elements dropdown-elements">
                     <h2>Мой аккаунт</h2>
                     <section>
                         <div>
-                            <h3>Выбор опции</h3>
+                            <h3><span id = 'username' class = 'name'></span></h3>
                             <nav class="input-settings-group">
                                 <ul>
-                                    <li><a href='flagguess.html'>Твой счёт: </a></li>
+                                    <li> Твои монетки:
+                                        <span id = "score-count" class="score">0</span>
+                                    </li>
                                     <li><a href='login.html'>Выйти из аккаунта</a></li>
                                 </ul>
                             </nav>
@@ -110,6 +112,7 @@
                             
             </div>
         </footer>
+        <script type="text/javascript" src="scripts/account.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
         <script type="text/javascript">
             $(function() {

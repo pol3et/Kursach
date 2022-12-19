@@ -63,24 +63,24 @@
             </div>
 
 
-            <div class="material-symbols-outlined dropdown-icons">settings
+            <div class="material-symbols-outlined dropdown-icons" onclick="MyAccount(event);">account_circle
                 <div class="settings-elements dropdown-elements">
-                    <h2>Настройки</h2>
+                    <h2>Мой аккаунт</h2>
                     <section>
                         <div>
-                            <h3>Выбор игры</h3>
+                            <h3><span id = 'username' class = 'name'></span></h3>
                             <nav class="input-settings-group">
                                 <ul>
-                                    <li><a href='mathgame.html'>Mathgame</a></li>
-                                    <li><a href='flagguess.html'>FlagGuess</a></li>
-                                    <li><a href='tictactoe.html'>TicTacToe</a></li>
-                                    <li><a href='barspuzzle.html'>BarsPuzzle</a></li>
+                                    <li> Твои монетки:
+                                        <span id = "score-count" class="score">0</span>
+                                    </li>
+                                    <li><a href='login.html'>Выйти из аккаунта</a></li>
                                 </ul>
                             </nav>
                         </div>
                     </section>
                 </div>
-            </div>                    
+            </div>                      
         </header>
         <section class="map_itmo_bars">
             <div class="container">
@@ -112,13 +112,14 @@
                             
             </div>
         </footer>
+        <script type="text/javascript" src="scripts/account.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript">
             $(function() {
               $('.map_bars').maphilight();
             });
           </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
         
         

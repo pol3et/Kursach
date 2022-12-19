@@ -2,6 +2,7 @@ const signUp = e => {
   let name = document.getElementById('name').value,
       login = document.getElementById('login').value,
       password = document.getElementById('password').value;
+      score = 42;
 
   let formData = JSON.parse(localStorage.getItem('formData')) || [];
 
@@ -12,14 +13,14 @@ const signUp = e => {
       );
 
   if(!exist){
-      formData.push({ name, login, password });
+      formData.push({ name, login, password, score });
       localStorage.setItem('formData', JSON.stringify(formData));
       document.querySelector('form').reset();
       document.getElementById('name').focus();
-      alert("Ура, твой аккаунт зарегестрирован!\n\nВернись на форму авторизации и войди в свой аккаунт.");
+      alert("Ура, твой аккаунт зарегистрирован!\n\nВернись на форму авторизации и войди в свой аккаунт.");
   }
   else{
-      alert("Ууууууупс.....\nКажется такой аккаунт уже существует!\n\nПопробуй войти в свой аккаунт или зарегестрируй новый.");
+      alert("Ууууууупс.....\nКажется, такой аккаунт уже существует!\n\nПопробуй войти в свой аккаунт или зарегистрируй новый.");
   }
   e.preventDefault();
 }
@@ -30,7 +31,7 @@ function signIn(e) {
   let exist = formData.length && 
   JSON.parse(localStorage.getItem('formData')).some(data => data.login.toLowerCase() == login && data.password.toLowerCase() == password);
   if(!exist){
-      alert("Барсик не знает такого человека :(\n\nПопробуй еще раз или зарегестрируй новый аккаунт.");
+      alert("Барсик не знает такого человека :(\n\nПопробуй еще раз или зарегистрируй новый аккаунт.");
   }
   else{
       location.href = "index2.html";
