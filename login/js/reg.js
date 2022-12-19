@@ -28,15 +28,15 @@ const signUp = e => {
 }
 
 function signIn(e) {
-  let login = document.getElementById('login').value, password = document.getElementById('password').value;
-  let formData = JSON.parse(localStorage.getItem('formData')) || [];
-  let exist = formData.length && 
-  JSON.parse(localStorage.getItem('formData')).some(data => data.login.toLowerCase() == login && data.password.toLowerCase() == password);
-  if(!exist){
-      alert("Барсик не знает такого человека :(\n\nПопробуй еще раз или зарегистрируй новый аккаунт.");
+    let login = document.getElementById('login').value, password = document.getElementById('password').value;
+    let formData = JSON.parse(localStorage.getItem('formData')) || [];
+    let exist = formData.length && 
+    JSON.parse(localStorage.getItem('formData')).some(data => data.login.toLowerCase() == login && data.password.toLowerCase() == password);
+    if(!exist){
+        alert("Барсик не знает такого человека :(\n\nПопробуй еще раз или зарегистрируй новый аккаунт.");
+    }
+    else{
+        location.href = "tim_message1.html";
+    }
+    e.preventDefault();
   }
-  else{
-      location.href = "tim_message1.html";
-  }
-  e.preventDefault();
-}
