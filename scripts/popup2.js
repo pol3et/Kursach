@@ -9,7 +9,7 @@ window.addEventListener("load", function(){
 
 document.querySelector("#close4").addEventListener("click", function(){
     document.querySelector(".popup4").style.display = "none"; 
-    setTimeout(showIt(), 60000);
+    setTimeout("showIt()", 60000);
 });
 
 function showIt() {
