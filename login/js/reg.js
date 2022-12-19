@@ -2,7 +2,7 @@ const signUp = e => {
   let name = document.getElementById('name').value,
       login = document.getElementById('login').value,
       password = document.getElementById('password').value;
-      score = 42;
+  let score = 42;
 
   let formData = JSON.parse(localStorage.getItem('formData')) || [];
 
@@ -13,8 +13,10 @@ const signUp = e => {
       );
 
   if(!exist){
-      formData.push({ name, login, password, score });
+      formData.push({ name, login, password });
       localStorage.setItem('formData', JSON.stringify(formData));
+      localStorage.setItem('score', score);
+      localStorage.setItem('uname', name);
       document.querySelector('form').reset();
       document.getElementById('name').focus();
       alert("Ура, твой аккаунт зарегистрирован!\n\nВернись на форму авторизации и войди в свой аккаунт.");
