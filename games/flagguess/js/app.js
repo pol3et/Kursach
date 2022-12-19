@@ -122,7 +122,11 @@ class UiUpdate {
     // Function to increment score and update it in HTML.
     updateScore(){
         p1.score+=1;
+        console.log(p1.score)
         document.querySelector(".score").innerText = p1.score;
+        if(p1.score != 0){
+            localStorage.setItem('fscore',p1.score);
+        }
     }
     // Function to Update score and game mode on end page
     updateEndPage(){
@@ -190,6 +194,28 @@ let questionSetter = function(n){
     
 
 }
+
+gamestart = document.getElementById("gamestart");
+gamestart.addEventListener("click", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup4").style.display = "block";
+        },
+        10
+    )
+});
+
+document.querySelector("#close4").addEventListener("click", function(){
+    document.querySelector(".popup4").style.display = "none"; 
+    setTimeout("showIt()", 20000);
+});
+
+function showIt() {
+    document.getElementById("popup3").disabled = false;
+    document.getElementById("popup3").style.visibility = "visible";
+    
+  }
+ // after 60 seconds
 
 let questionN = dataArray.length-1;// to keep track of last element, questions start from last element
 
