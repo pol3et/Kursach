@@ -20,12 +20,12 @@ document.querySelector("#close4").addEventListener("click", function(){
     document.querySelector(".popup4").style.display = "none"; 
     setTimeout("showIt()", 20000);
 });
-document.querySelector("#close").addEventListener("click", function(){
-    document.querySelector(".popup").style.display = "none";
-});
-document.querySelector("#close2").addEventListener("click", function(){
-    document.querySelector(".popup").style.display = "none";
-});
+document.getElementById('#close').onclick = function() {
+    document.getElementById('.popup').hidden = true;
+  }
+document.getElementById('#close2').onclick = function() {
+    document.getElementById('.popup').hidden = true;
+  }
 
 function showIt() {
     document.getElementById("popup3").style.visibility = "visible";
