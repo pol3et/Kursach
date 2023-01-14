@@ -49,9 +49,6 @@ function initPuzzle(){
     _currentDropPiece = null;
     _stage.drawImage(_img, 0, 0, _puzzleWidth, _puzzleHeight, 0, 0, _puzzleWidth, _puzzleHeight);
     createTitle("Нажми чтобы начать игру!");
-    var previousScrore = localStorage.getItem('score');
-    var currentScore = previousScrore + 15;
-    localStorage.setItem('score', currentScore);
     buildPieces();
 }
 function createTitle(msg){
@@ -245,7 +242,10 @@ function gameOver(){
     document.getElementById('canvas').ontouchmove = null;
     document.onmouseup = null;
     document.getElementById('canvas').ontouchend = null;
-    alert('Победа! Вы получаете 15 очков!');
+    var previousScrore = parseInt(localStorage.getItem('score'));
+    var currentScore = previousScrore + 15;
+    localStorage.setItem('score', currentScore);
+    alert('Победа! Вы получаете 30 очков!');
     location.href = "index4.html";
     showIt();
     initPuzzle();

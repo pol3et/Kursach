@@ -195,26 +195,26 @@ let questionSetter = function(n){
 
 }
 
-gamestart = document.getElementById("gamestart");
-gamestart.addEventListener("click", function(){
-    setTimeout(
-        function open(event){
-            document.querySelector(".popup4").style.display = "block";
-        },
-        10
-    )
-});
+// gamestart = document.getElementById("gamestart");
+// gamestart.addEventListener("click", function(){
+//     setTimeout(
+//         function open(event){
+//             document.querySelector(".popup4").style.display = "block";
+//         },
+//         10
+//     )
+// });
 
-document.querySelector("#close4").addEventListener("click", function(){
-    document.querySelector(".popup4").style.display = "none"; 
-    setTimeout("showIt()", 20000);
-});
+// document.querySelector("#close4").addEventListener("click", function(){
+//     document.querySelector(".popup4").style.display = "none"; 
+//     setTimeout("showIt()", 20000);
+// });
 
-function showIt() {
-    document.getElementById("popup3").disabled = false;
-    document.getElementById("popup3").style.visibility = "visible";
+// function showIt() {
+//     document.getElementById("popup3").disabled = false;
+//     document.getElementById("popup3").style.visibility = "visible";
     
-  }
+//   }
  // after 60 seconds
 
 let questionN = dataArray.length-1;// to keep track of last element, questions start from last element

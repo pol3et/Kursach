@@ -20,24 +20,60 @@ function showIt() {
  // after 60 seconds
 
 const showStats = e => {
-    var cntr = localStorage.getItem('eqc');
+    var cntr = parseInt(localStorage.getItem('eqc'));
     console.log(cntr);
-    var seqcounter = cntr - 1;
-    var mscore = seqcounter*10;
-    var previousScrore = localStorage.getItem('score');
+    if(cntr > 0){
+        var seqcounter = cntr - 1;
+        var mscore = seqcounter*10;
+    }
+    else{
+        var seqcounter = 0;
+        var mscore = 0;
+    }
+    
+    var previousScrore = parseInt(localStorage.getItem('score'));
     var currentScore = previousScrore + mscore;
     localStorage.setItem('score', currentScore);
     document.getElementById('s-equation-counter').innerHTML = seqcounter;
     document.getElementById('m-score').innerHTML = mscore; 
+    document.getElementById('stat-btn').style.display = 'none';
+    document.getElementById('letsgo').style.display = "block";
   }
 
-  const showStats2 = e => {
+// var tag = document.getElementById('letsgo');
+// var statbtn = document.getElementById('stat-btn');
+// statbtn.addEventListener('click', function(){
+//     tag.classList.toggle('letsgo');
+// });
+
+document.querySelector("#close5").addEventListener("click", function(){
+    document.querySelector(".popup5").style.display = "none"; 
+    setTimeout("showIt2()", 20000);
+});
+
+function showIt2() {
+    document.getElementById("popup6").disabled = false;
+    document.getElementById("popup6").style.visibility = "visible";
+
+}
+
+const flagpopup = e => {
+    document.getElementById("popup5").style.visibility = "visible";
+}
+
+// document.getElementById("gamestart").addEventListener("click", function(){
+//     document.getElementById("popup5").style.visibility = "visible";
+// });
+
+
+
+  function showStats2(e) {
     var fscore = localStorage.getItem('fscore');
     console.log(fscore);
     var monc = fscore * 10;
-    var previousScrore = localStorage.getItem('score');
-    var currentScore = previousScrore + monc+70;
+    var previousScrore = parseInt(localStorage.getItem('score'));
+    var currentScore = previousScrore + monc;
     localStorage.setItem('score', currentScore);
     document.getElementById("scount").innerHTML = fscore;
-    document.getElementById("mounc").innerHTML = monc; 
-  }
+    document.getElementById("mounc").innerHTML = monc;
+}
